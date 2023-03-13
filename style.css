@@ -84,6 +84,12 @@ a {
 }
 
 /* Utilities Starts Here*/
+@media screen and (max-width: 1024px) {
+    .section {
+        padding-inline: 2.5rem;
+    }
+}
+
 .btn-primary {
     padding: .75rem 3rem;
     background-color: var(--clr-primary);
@@ -161,6 +167,10 @@ a {
     overflow-y: hidden;
 }
 
+.hero-section .hero-images-wrapper::-webkit-scrollbar {
+    display: none;
+}
+
 /* .hero-section .hero-images-wrapper .img-container {
 } */
 
@@ -222,6 +232,17 @@ a {
     text-transform: uppercase;
 }
 
+.about-wrapper .img-container {
+    width: 1000px;
+    height: auto;
+}
+
+.about-wrapper .img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
 /* Model Section Starts Here*/
 .models-section {
     padding-top: 5rem;
@@ -237,9 +258,9 @@ a {
 
 .models-section .models-wrapper {
     display: grid;
-    /* grid-template-columns: repeat(auto-fit, minmax(min(375px), 100%), 1fr); */
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(375px, 1fr));
+    place-items: center;
+    row-gap: 1rem;
 }
 
 .models-wrapper .img-container {
@@ -282,7 +303,7 @@ a {
     display: grid;
     grid-template-columns: 1fr 1fr;
     place-items: center;
-    gap: 3rem;
+    gap: 1rem;
 }
 
 .reviews-section .reviews-content h2 {
@@ -305,6 +326,17 @@ a {
 .reviews-section .reviews-content button:last-child {
     margin-left: 1rem;
     border: 2px solid var(--clr-primary);
+}
+
+.reviews-section .reviews-img-container {
+    width: 500px;
+    height: auto;
+}
+
+.reviews-section .reviews-img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 /* Reviews Section Ends Here */
@@ -355,6 +387,7 @@ a {
 .footer-section .footer {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
+    justify-content: center;
 }
 
 .footer-section .footer .elegance-logo {
